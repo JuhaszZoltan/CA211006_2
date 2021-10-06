@@ -93,7 +93,7 @@ namespace CA211006_2
     {
         static List<Auto> autok = new List<Auto>();
         static Random rnd = new Random();
-        private const string Betuk = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string Betuk = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         static void Main()
         {
@@ -102,7 +102,7 @@ namespace CA211006_2
             LegtobbMatricasMarkak();
             Console.ReadKey();
         }
-        private static void LegtobbMatricasMarkak()
+        static void LegtobbMatricasMarkak()
         {
             var dic = new Dictionary<Marka, int>();
             foreach (var a in autok)
@@ -117,9 +117,8 @@ namespace CA211006_2
             Console.WriteLine($"A következő márkákból van a legtöbb ({maxValue} db) az autópályákon:");
             foreach (var kvp in dic)
                 if (kvp.Value == maxValue) Console.WriteLine($"\t{kvp.Key}");
-
         }
-        private static void LegtobbetTudMegMenni()
+        static void LegtobbetTudMegMenni()
         {
             int maxi = 0;
             for (int i = 0; i < autok.Count; i++)
@@ -129,7 +128,7 @@ namespace CA211006_2
             Console.WriteLine($"legtöbb kilométert tud még menni a lista [{maxi}] indexű autója. adatai:");
             autok[maxi].GetAutoInfo();
         }
-        private static void InitAutok()
+        static void InitAutok()
         {
             for (int i = 0; i < 30; i++)
             {
@@ -143,7 +142,7 @@ namespace CA211006_2
                     rendszam: RendszamGen()));
             }
         }
-        private static string RendszamGen()
+        static string RendszamGen()
         {
             return $"{Betuk[rnd.Next(Betuk.Length)]}{Betuk[rnd.Next(Betuk.Length)]}{Betuk[rnd.Next(Betuk.Length)]}-{rnd.Next(10)}{rnd.Next(10)}{rnd.Next(10)}";
         }
