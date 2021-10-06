@@ -93,7 +93,7 @@ namespace CA211006_2
     {
         static List<Auto> autok = new List<Auto>();
         static Random rnd = new Random();
-        private static string betuk = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string Betuk = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         static void Main()
         {
@@ -145,7 +145,7 @@ namespace CA211006_2
         }
         private static string RendszamGen()
         {
-            return $"{betuk[rnd.Next(betuk.Length)]}{betuk[rnd.Next(betuk.Length)]}{betuk[rnd.Next(betuk.Length)]}-{rnd.Next(10)}{rnd.Next(10)}{rnd.Next(10)}";
+            return $"{Betuk[rnd.Next(Betuk.Length)]}{Betuk[rnd.Next(Betuk.Length)]}{Betuk[rnd.Next(Betuk.Length)]}-{rnd.Next(10)}{rnd.Next(10)}{rnd.Next(10)}";
         }
     }
 }
