@@ -14,7 +14,7 @@ namespace CA211006_2
         private float _benzinMennyiseg;
         private string _rendszam;
 
-        private static string valRszChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string ValRszChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         public float AtlagFogyasztas
         { 
@@ -53,7 +53,7 @@ namespace CA211006_2
             get => _rendszam;
             set
             {
-                bool elsoHarom = valRszChar.Contains(value[0]) && valRszChar.Contains(value[1]) && valRszChar.Contains(value[2]);
+                bool elsoHarom = ValRszChars.Contains(value[0]) && ValRszChars.Contains(value[1]) && ValRszChars.Contains(value[2]);
                 bool kotojel = value[3] == '-';
                 bool utolsoHarom = int.TryParse(value.Substring(4, 3), out _);
                 bool hossz = value.Length == 7;
