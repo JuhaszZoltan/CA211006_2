@@ -99,10 +99,10 @@ namespace CA211006_2
         {
             InitAutok();
             LegtobbetTudMegMenni();
-            LegtobbMatricasMarka();
+            LegtobbMatricasMarkak();
             Console.ReadKey();
         }
-        private static void LegtobbMatricasMarka()
+        private static void LegtobbMatricasMarkak()
         {
             var dic = new Dictionary<Marka, int>();
             foreach (var a in autok)
