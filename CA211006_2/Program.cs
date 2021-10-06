@@ -114,7 +114,7 @@ namespace CA211006_2
                 }
             }
             int maxValue = dic.Values.Max();
-            Console.WriteLine("A következő márkákból van a legtöbb ({maxValue} db) az autópályákon:");
+            Console.WriteLine($"A következő márkákból van a legtöbb ({maxValue} db) az autópályákon:");
             foreach (var kvp in dic)
                 if (kvp.Value == maxValue) Console.WriteLine($"\t{kvp.Key}");
 
